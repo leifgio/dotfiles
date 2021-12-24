@@ -1,0 +1,30 @@
+# Start/End
+#ctrl+semicolon start, grid 3x3,windowzoom
+space warp, end
+
+### Example using a 3x3 grid with nethack-vi keys
+mod3+semicolon start, grid 3x3, windowzoom
+j cell-select 1x2      # left
+comma cell-select 2x3      # down
+i cell-select 2x1      # up
+l cell-select 3x2      # right
+u cell-select 1x1      # up-left
+o cell-select 3x1      # up-right
+m cell-select 1x3      # down-left
+period cell-select 3x3      # down-right
+k cell-select 2x2 # center
+
+# Move
+#h cut-left
+#j cut-down
+#k cut-up
+#l cut-right
+#ctrl+h cut-left, cut-down
+#ctrl+j cut-left, cut-up
+#ctrl+k cut-right, cut-up
+#ctrl+l cut-right, cut-down
+
+
+# History
+h history-back
+semicolon end

@@ -1,0 +1,4 @@
+#!/bin/sh
+xrandr --setmonitor HDMI-A-0-1 640/155x1080/173+0+0 HDMI-A-0
+xrandr --setmonitor HDMI-A-0-2 1280/155x720/173+640+0 none
+xrandr --setmonitor HDMI-A-0-3 1280/155x360/173+640+720 none

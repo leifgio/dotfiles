@@ -1,0 +1,23 @@
+# mod3 binds
+# mouse navigation
+mod3 + h
+	xdotool mousemove_relative -- -15 0
+mod3 + j
+	xdotool mousemove_relative -- 0 15
+mod3 + k
+	xdotool mousemove_relative -- 0 -15
+mod3 + l
+	xdotool mousemove_relative -- 15 0
+mod3 + {u,o,i}
+	xdotool click {1,3,2}
+#mod3 + o
+#	xdotool click 3
+#mod3 + i
+#	xdotool click 2
+mod3 + n
+	xdotool mousedown 1
+mod3 + m
+	xdotool mouseup 1
+
+mod3 + Escape
+	xdotool key Caps_Lock

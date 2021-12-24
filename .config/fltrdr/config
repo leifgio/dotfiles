@@ -1,0 +1,18 @@
+# remove all unnecessary
+set progress off
+set view off
+set status off
+
+# pointer
+sym border-top-mark |
+sym border-bottom-mark |
+
+# wpm
+wpm 700
+
+prev 0
+next 0
+offset 0
+
+# color
+style text-highlight red

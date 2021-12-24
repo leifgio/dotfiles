@@ -1,0 +1,31 @@
+#!/bin/sh
+
+# This script is called on startup to remap keys.
+# Increase key speed via a rate change
+xset r rate 300 50
+# Map the caps lock key to super...
+setxkbmap -option caps:super
+# But when it is pressed only once, treat it as escape.
+killall xcape 2>/dev/null ; xcape -e 'Super_L=Escape'
+
+# map space to hyperl
+spare_modifier="Hyper_L"
+xmodmap -e "keycode 65 = $spare_modifier"
+xmodmap -e "remove mod4 = $spare_modifier" # hyper_l is mod4 by default
+xmodmap -e "add mod3 = $spare_modifier"
+xmodmap -e "add Control = $spare_modifier"
+
+# Map space to an unused keycode (to keep it around for xcape to
+# use).
+xmodmap -e "keycode 97 = space"
+
+# Finally use xcape to cause the space bar to generate a space when tapped.
+xcape -e "$spare_modifier=space"
+# Turn off the caps lock if on since there is no longer a key for it.
+xset -q | grep "Caps Lock:\s*on" && xdotool key Caps_Lock
+numlockx
+# xmodmap -e 'remove mod5 = Mode_switch'
+# xmodmap -e 'keycode 65 = Mode_switch'
+# xmodmap -e 'add mod2 = Mode_switch'
+# xmodmap -e 'keycode 97 = space'
+# xcape -e 'Mode_switch=space'

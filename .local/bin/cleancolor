@@ -1,0 +1,4 @@
+#!/bin/bash
+cd /home/gio/.cache/wal/
+sed '9,11d;17d' colors-wal-dwm.h > file.new && mv file.new  colors-wal-dwm.h
+sed 's/const//g' colors-wal-dwm.h > file.new && mv file.new  colors-wal-dwm.h
